@@ -1,0 +1,108 @@
+.article
+   &__aside
+      display: none
+   &__lead
+      width: 100%
+      height: 200px
+      margin-bottom: 20px
+      position: relative
+      object-fit: cover
+   &__title
+      position: absolute
+      bottom: 23px
+      left: 23px
+      right: 23px
+   &__pic
+      width: 100%
+      height: 172px
+      margin-bottom: $margin
+      display: block
+      border-radius: 4px
+      position: relative
+   &__btn
+      &-big
+         margin-bottom: $margin
+         position: relative
+         &::before, &::after
+            content: ''
+            position: absolute
+            left: 0
+            top: 50%
+            width: 20px
+            height: 1px
+            background: #BEBEBE
+         &::after
+            left: auto
+            right: 0
+         .btn
+            max-width: calc(100% - 60px)
+            position: relative
+            left: 50%
+            transform: translateX(-50%)
+   &__themes
+      margin-bottom: 20px
+      display: flex
+      flex-wrap: wrap
+      li
+         padding: 10px 15px
+         margin-right: 10px
+         margin-bottom: 10px
+         font-weight: 400
+         font-size: 13px
+         line-height: 120%
+         color: #5A5A5A
+         background: #EBEBEB
+         border-radius: 4px
+
+@media screen and (min-width: 460px)
+   .article
+      &__lead
+         height: 250px
+      &__pic
+         height: 250px
+
+@media screen and (min-width: $width_tab)
+   .article
+      &__lead
+         height: 400px
+      &__title
+         bottom: 36px
+         left: 36px
+         right: 36px
+      &__pic
+         height: 362px
+      &__btn
+         &-big
+            &::before,
+            &::after
+               width: calc((100% - 410px)/2)
+            .btn
+               max-width: 390px
+
+@media screen and (min-width: $width_md)
+   .article
+      &__lead
+         height: 500px
+
+@media screen and (min-width: $width_desk)
+   .article
+      &__inner
+         display: flex
+         justify-content: space-between
+         align-items: flex-start
+      &__aside
+         min-width: 270px
+         margin-left: 30px
+         display: block
+      &__main
+         max-width: 900px
+         width: calc(100% - 300px)
+      &__title
+         bottom: 50px
+         right: 50px
+         left: 50px
+      &__btn
+         &-big
+            margin-bottom: 70px
+      &__themes
+         margin-bottom: 42px

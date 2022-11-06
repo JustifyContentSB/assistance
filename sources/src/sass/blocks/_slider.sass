@@ -1,0 +1,79 @@
+.slider
+   width: 100%
+   max-width: 1230px
+   margin: 0 auto
+   margin-bottom: $margin
+   .title
+      margin-bottom: 20px
+      padding-left: $padding
+   &__content
+      position: relative
+   &__item
+      width: 263px
+      height: auto
+      padding-bottom: 20px
+      border-bottom: 1px solid #E7E7E7
+   &__btn
+      display: block
+      &:hover,
+      &:focus
+         .slider
+            &__text
+               color: $accent
+   &__img
+      margin-bottom: 10px
+      img
+         width: 100%
+   .data
+      margin-bottom: 10px
+   &__text
+      font-weight: 400
+      font-size: 12px
+      line-height: 133%
+      color: #5A5A5A
+      transition: all $transitionTime ease
+   &__swiper
+      padding: 0 $padding
+      overflow: hidden
+   .swiper
+      &-button
+         &-prev, &-next
+            display: none
+   .data
+      &__icon
+         width: 16px
+         min-width: 16px
+         height: 16px
+         margin-right: 5px
+      &__item
+         margin-right: 10px
+
+@media screen and (min-width: 1230px)
+   .slider
+      .swiper
+         &-button
+            &-prev, &-next
+               width: 24px
+               height: 100%
+               top: 0
+               margin: 0
+               display: block
+               pointer-events: auto
+               background: $blockBg
+               border-radius: 4px
+               &::after
+                  color: #000000
+                  font-size: 10px
+            &-prev
+               left: 0
+            &-next
+               right: 0
+      &__content
+         max-width: 1200px
+         margin: 0 auto
+         padding: 0 44px
+      &__swiper
+         padding: 0
+      &__text
+         font-size: 13px
+         line-height: 138%

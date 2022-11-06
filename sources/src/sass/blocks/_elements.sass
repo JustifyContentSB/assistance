@@ -1,0 +1,187 @@
+.main-title
+   font-weight: 500
+   font-size: 20px
+   line-height: 120%
+   color: #fff
+
+.title
+   margin-bottom: 14px
+   font-weight: 500
+   font-size: 16px
+   line-height: 125%
+
+.text
+   margin-bottom: $margin
+   font-weight: 300
+   font-size: 13px
+   line-height: 138%
+   b
+      font-weight: 500
+
+.btn
+   width: 100%
+   padding: 12px 30px
+   display: inline-flex
+   align-items: center
+   justify-content: center
+   background: $accent
+   box-shadow: 0px 5px 10px rgba(216, 40, 22, 0.4)
+   border-radius: 40px
+   font-weight: 400
+   font-size: 16px
+   line-height: 122%
+   text-align: center
+   color: #fff
+   transition: all $transitionTime ease
+   &:hover,
+   &:focus
+      background: #C62F1F
+   &--secondary
+      background: #fff
+      border-bottom: none
+      color: #416AA8
+      font-size: 12px
+      line-height: 143%
+      box-shadow: 0px 5px 10px rgba(65, 106, 168, 0.5)
+      &:hover,
+      &:focus
+         background: #fff
+   &--wide
+      font-size: 12px
+      line-height: 143%
+      border-bottom: 2px solid #A31212
+
+.info
+   margin-bottom: $margin
+   .num-list
+      margin-bottom: 20px
+
+.num-list
+   $liMargin: 10px
+   margin: 0
+   padding: 0
+   font-weight: 400
+   font-size: 12px
+   line-height: 120%
+   color: #5A5A5A
+   list-style-type: none
+   counter-reset: list1
+   li
+      margin-bottom: $liMargin
+      padding-left: 20px
+      position: relative
+      list-style-type: none
+      &:last-child
+         margin-bottom: 0
+      &::before
+         position: absolute
+         top: 0
+         left: 0
+         width: 22px
+         text-align: left
+         color: #D82816
+         font-size: 16px
+         counter-increment: list1
+         content: counter(list1) "."
+   ol
+      margin-top: $liMargin
+      padding: 0
+      padding-left: 10px
+      counter-reset: list2
+      li
+         padding-left: 32px
+         margin-bottom: 15px
+         &::before
+            width: 32px
+            counter-increment: list2
+            content: counter(list1) "." counter(list2) "."
+
+.dot-list
+   margin-bottom: 20px
+   padding-left: 20px
+   padding-right: 10px
+   font-weight: 300
+   font-size: 13px
+   line-height: 138%
+   li
+      margin-bottom: 10px
+      padding-left: 20px
+      position: relative
+      &::before
+         content: ''
+         width: 8px
+         height: 8px
+         border-radius: 50%
+         background: $accent
+         position: absolute
+         left: 0
+         top: 5px
+
+.important
+   margin-bottom: $margin
+   padding: 20px
+   padding-left: 15px
+   font-weight: 300
+   font-size: 13px
+   line-height: 138%
+   color: #393939
+   background: #FFF8EC
+   border-left: 5px solid #F0E7D8
+   strong
+      font-weight: 500
+
+@media screen and (min-width: $width_mob)
+   .btn
+      padding: 14px 40px
+      font-size: 18px
+      &--secondary
+         font-size: 14px
+      &--wide
+         font-size: 14px
+
+@media screen and (min-width: $width_tab)
+   .main-title
+      font-size: 30px
+   .btn
+      width: auto
+      padding: 14px 70px 15px
+      &--wide
+         max-width: 390px
+         padding: 14px 68px 15px
+      &--secondary, &--wide
+         font-size: 16px
+   .important
+      padding: 30px
+      padding-left: 25px
+
+@media screen and (min-width: $width_desk)
+   .main-title
+      font-size: 36px
+   .num-list
+      font-size: 13px
+      li
+         margin-bottom: 19px
+      ol
+         margin-top: 14px
+   .text
+      font-size: 15px
+      line-height: 167%
+   .title
+      margin-bottom: 22px
+      font-size: 20px
+      line-height: 130%
+   .important
+      font-size: 15px
+      line-height: 167%
+   .btn
+      &--secondary, &--wide
+         font-size: 18px
+      &--wide
+         line-height: 122%
+   .dot-list
+      font-size: 15px
+      li
+         margin-bottom: 15px
+   .info
+      .num-list
+         padding-left: 20px

@@ -1,0 +1,62 @@
+.share
+   margin-bottom: $margin
+   padding-bottom: 20px
+   position: relative
+   &::after
+      content: ''
+      position: absolute
+      height: 1px
+      left: 0
+      right: 0
+      bottom: 0
+      background: #BEBEBE
+   &__inner
+      padding: 14px
+      background: $blockBg
+      border-radius: 4px
+   &__top
+      margin-bottom: 14px
+      display: flex
+      align-items: center
+   &__title
+      margin-right: 12px
+      font-weight: 500
+      font-size: 15px
+   &__icons
+      display: flex
+      font-size: 14px
+      li
+         margin-right: 6px
+         &:last-child
+            margin-right: 0
+      a
+         padding: 6px
+         background: #fff
+         border-radius: 4px
+         display: flex
+         align-items: center
+      &-icon
+         width: 24px
+         min-width: 24px
+         height: 24px
+         margin-right: 2px
+
+@media screen and (min-width: $width_tab)
+   .share
+      &__inner
+         padding: 20px 30px
+         display: flex
+         justify-content: space-between
+      &__top
+         margin: 0
+
+@media screen and (min-width: $width_md)
+   .share
+      padding-bottom: 30px
+      &__icons
+         li
+            margin-right: 12px
+         a
+            padding: 10px
+         &-icon
+            margin-right: 10px

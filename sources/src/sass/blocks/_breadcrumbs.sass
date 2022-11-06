@@ -1,0 +1,41 @@
+.breadcrumbs
+   &__list
+      padding: 20px 0 20px $padding
+      font-weight: 400
+      font-size: 12px
+      line-height: 120%
+      color: #A5A5A5
+      display: flex
+      white-space: nowrap
+      overflow-x: auto
+      -ms-overflow-style: none
+      overflow: -moz-scrollbars-none
+      &::-webkit-scrollbar
+         width: 0
+         height: 0
+      &::-webkit-input-placeholder, &::-moz-placeholder
+         color: #fff
+   li
+      margin-right: 15px
+      padding-right: 22px
+      position: relative
+      &::after
+         content: '/'
+         position: absolute
+         right: 0
+         top: 50%
+         transform: translateY(-50%)
+      &:last-child
+         margin-right: 0
+         &::after
+            display: none
+   &__link
+      &--active
+         color: #7E9AD0
+
+@media screen and (min-width: $width_desk)
+   .breadcrumbs
+      &__list
+         padding: 24px $padding
+         overflow-x: visible
+         flex-wrap: wrap

@@ -1,0 +1,22 @@
+block modals
+   .modal.modal-login
+      .modal__inner
+         .modal__top
+            h3.title Заголовок модального окошка
+            p.modal__lead Жизнь совершенно непредсказуема.
+            button.modal__close
+               img(src="images/icons/close.svg", alt="закрыть попап" width="24" height="24")
+         form.form.modal__form(action="#")
+            .form__inputs
+               label.form__label
+                  input(type="text" placeholder="Имя *")
+               label.form__label
+                  textarea(cols="30" rows="10" placeholder="Ваш комментарий *")
+            button.btn Тестовая надпись
+            .form__agree
+               label.form__agree-label
+                  input(type="checkbox")
+                  span.form__agree-checkbox
+                     span.form__agree-checkbox__check
+                  span.form__agree-text.
+                     Я принимаю условия #[a(href="#") Пользовательского соглашения] и даю свое согласие на обработку моих персональных данных в соответствии с #[a(href="#") Политикой конфиденциальности]

@@ -1,0 +1,57 @@
+.expert
+   margin-bottom: $margin
+   .title
+      margin-bottom: 24px
+      color: inherit
+   .btn
+      width: auto
+      padding: 14px 33px
+   &__inner
+      padding: 20px 95px 40px 20px
+      background: #80A7E2
+      color: #fff
+      border-radius: 4px
+      position: relative
+      overflow: hidden
+   &__pic
+      position: absolute
+      right: -20px
+      bottom: 0
+   &__text
+      margin-bottom: 16px
+      font-size: 13px
+      line-height: 115%
+
+@media screen and (min-width: $width_tab)
+   .expert
+      &__inner
+         padding: 30px 200px 50px 30px
+      &__pic
+         right: 0
+         img
+            width: 170px
+      .btn
+         padding: 13px 50px
+
+@media screen and (min-width: $width_desk)
+   .expert
+      padding-top: 35px
+      &__inner
+         padding: 50px
+         padding-right: 200px
+         overflow: visible
+      &__info
+         width: 100%
+         max-width: 538px
+      &__text
+         margin-bottom: 20px
+         font-size: 15px
+         line-height: 167%
+      .btn
+         padding: 13px 70px
+      .title
+         font-size: 22px
+      &__pic
+         right: 8px
+         img
+            width: 253px

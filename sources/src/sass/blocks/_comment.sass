@@ -1,0 +1,142 @@
+.comment
+   margin-bottom: $margin
+   &__inner
+      padding: 20px
+      border: 1px solid #BEBEBE
+      border-radius: 4px
+   &__title
+      margin-bottom: 15px
+      &-num
+         color: #BEBEBE
+   &__block
+      margin-bottom: 45px
+   &__list
+      margin-bottom: 15px
+   &__item
+      border-top: 1px solid #E8E8E8
+      display: none
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3)
+         display: block
+   &__answer
+      padding-top: 12px
+      padding-bottom: 15px
+   &__header
+      margin-bottom: 14px
+      display: flex
+      align-items: center
+   &__names
+      margin-right: auto
+      display: flex
+      align-items: center
+   &__author
+      margin-right: 10px
+      font-weight: 500
+      font-size: 13px
+      line-height: 150%
+      color: #393939
+   &__person
+      padding-left: 28px
+      font-weight: 300
+      font-size: 13px
+      line-height: 120%
+      color: #393939
+      position: relative
+      &::before
+         content: ''
+         position: absolute
+         top: -2px
+         left: 0
+         width: 18px
+         height: 18px
+         background: url('../images/icons/cite.svg') no-repeat center / contain
+   &__info
+      display: flex
+      align-items: center
+      font-weight: 300
+      font-size: 12px
+      line-height: 150%
+      color: #000
+   &__like
+      margin-right: 16px
+      display: flex
+      align-items: center
+      img
+         margin-right: 4px
+   &__text
+      font-weight: 300
+      font-size: 13px
+      line-height: 138%
+      color: #393939
+   &__btn
+      display: none
+      margin-top: 10px
+      font-weight: 400
+      font-size: 12px
+      line-height: 150%
+      color: $accent
+   &__dialog
+      .comment
+         &__answer
+            border-bottom: 1px solid #E8E8E8
+            &:last-child
+               border-bottom: 0
+   &__all
+      font-size: 13px
+      line-height: 120%
+      color: $accent
+      span
+         border-bottom: 1px dashed $accent
+         position: relative
+         &::after
+            content: ''
+            position: absolute
+            right: -25px
+            top: 50%
+            transform: translateY(-50%)
+            width: 13px
+            height: 13px
+            background: url('../images/icons/arrow-red.svg') no-repeat center / contain
+   .form
+      margin-bottom: 0
+      &__inputs
+         margin-bottom: 10px
+         display: block
+      &__label
+         padding-bottom: 20px
+         &:last-child
+            padding-bottom: 0
+
+@media screen and (min-width: $width_tab)
+   .comment
+      &__inner
+         padding: 30px
+      .form
+         input
+            max-width: 400px
+
+@media screen and (min-width: $width_desk)
+   .comment
+      &__title
+         margin-bottom: 18px
+      &__answer
+         padding: 22px 0
+      &__text
+         font-size: 14px
+         line-height: 143%
+      &__btn
+         display: inline-block
+      &__dialog
+         padding-left: 50px
+      &__block
+         margin-bottom: 50px
+      .form
+         &__inputs
+            margin-bottom: 20px
+      .comment
+         &__dialog
+            .comment
+               &__answer
+                  &:first-child
+                     padding-top: 0
