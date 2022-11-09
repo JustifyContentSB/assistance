@@ -11,15 +11,12 @@
    &__title
       margin-bottom: 8px
       font-weight: 500
-      font-size: 16px
+      font-size: 18px
    &__desc
       font-weight: 300
-      font-size: 13px
+      font-size: 15px
       line-height: 138%
       color: #393939
-   &__label
-      padding-bottom: 20px
-      display: block
    input, textarea
       width: 100%
       height: 46px
@@ -27,10 +24,35 @@
       border: 1px solid #BEBEBE
       border-radius: 4px
       font-size: 14px
+      color: #393939
       &::placeholder
          font-weight: 400
          font-size: 14px
          color: #9F9F9F
+      &:hover
+         border-color: #8A8A8A
+      &:focus
+         padding-left: 15px
+         padding-right: 15px
+         border: 2px solid #393939
+      &.full
+         border: 1px solid #8A8A8A
+   &__label
+      padding-bottom: 20px
+      display: block
+      position: relative
+      &--error
+         padding-bottom: 30px
+         &::after
+            content: 'Это поле обязательно к заполнению'
+            position: absolute
+            bottom: 14px
+            left: 0
+            font-weight: 400
+            font-size: 11px
+            color: #F04C4C
+         input
+            border: 1px solid #D82816
    textarea
       height: 117px
       resize: none
@@ -114,13 +136,14 @@
       &__top
          margin-bottom: 35px
       &__title
-         font-size: 20px
+         font-size: 22px
       &__desc
-         font-size: 15px
+         font-size: 17px
       &__inputs
          margin-bottom: 10px
       &__btn
          margin-bottom: 30px
       &__agree
+         font-size: 14px
          &-text
             max-width: 695px

@@ -1,19 +1,19 @@
 .main-title
    font-weight: 500
-   font-size: 20px
+   font-size: 22px
    line-height: 120%
    color: #fff
 
 .title
    margin-bottom: 14px
    font-weight: 500
-   font-size: 16px
+   font-size: 18px
    line-height: 125%
 
 .text
    margin-bottom: $margin
    font-weight: 300
-   font-size: 13px
+   font-size: 15px
    line-height: 138%
    b
       font-weight: 500
@@ -36,6 +36,7 @@
    &:hover,
    &:focus
       background: #C62F1F
+      box-shadow: none
    &--secondary
       background: #fff
       border-bottom: none
@@ -47,6 +48,7 @@
       &:focus
          background: #fff
    &--wide
+      padding: 12px 20px
       font-size: 12px
       line-height: 143%
       border-bottom: 2px solid #A31212
@@ -61,7 +63,7 @@
    margin: 0
    padding: 0
    font-weight: 400
-   font-size: 12px
+   font-size: 14px
    line-height: 120%
    color: #5A5A5A
    list-style-type: none
@@ -101,7 +103,7 @@
    padding-left: 20px
    padding-right: 10px
    font-weight: 300
-   font-size: 13px
+   font-size: 15px
    line-height: 138%
    li
       margin-bottom: 10px
@@ -122,13 +124,94 @@
    padding: 20px
    padding-left: 15px
    font-weight: 300
-   font-size: 13px
+   font-size: 15px
    line-height: 138%
    color: #393939
    background: #FFF8EC
    border-left: 5px solid #F0E7D8
    strong
       font-weight: 500
+
+.select2
+   $height: 46px
+   width: 100% !important
+   height: $height
+   .selection
+      display: block
+      height: 100%
+      
+   &-container--below
+      .select2-selection__rendered
+         padding: 8px 36px 10px 16px !important
+         border: 1px solid #8A8A8A !important
+         border-radius: 4px !important
+      .select2-selection--single
+         border: none
+   &-selection
+      display: block
+      height: 100% !important
+      border-radius: 4px !important
+      &__rendered
+         width: 100%
+         height: 100% !important
+         padding: 10px 36px 10px 16px !important
+         font-weight: 400
+         font-size: 14px !important
+         line-height: 16px
+         color: #393939 !important
+      &__placeholder
+         padding: 10px 36px 10px 16px !important
+         display: block !important
+         height: $height !important
+         line-height: 26px !important
+         font-size: 14px
+         color: #9F9F9F
+         position: absolute
+         left: 0
+         right: 0
+         top: 0
+         bottom: 0
+      &__arrow
+         width: 18px !important
+         height: 18px !important
+         top: 50% !important
+         right: 16px !important
+         background: url('../images/icons/arrow-down.svg') no-repeat center / contain
+         transform: rotate(180deg) translateY(50%)
+         b
+            display: none
+   &-search__field
+      display: none !important
+   &-search--dropdown
+      padding: 0 !important
+   &-results
+      &__option
+         height: 45px
+         padding: 10px 18px
+         font-weight: 300
+         font-size: 15px
+         line-height: 25px
+         color: #393939 !important
+         background: #fff !important
+         &:hover,
+         &:focus
+            background: #E0E0E0 !important
+         &--selected
+            background: #EBEBEB !important
+            color: #fff !important
+         &--selectable
+            color: #393939 !important
+
+.overlay
+   position: fixed
+   left: 0
+   right: 0
+   top: 0
+   bottom: 0
+   background: rgba(#000, 0.3)
+   display: none
+   &--active
+      display: block
 
 @media screen and (min-width: $width_mob)
    .btn
@@ -147,7 +230,7 @@
       padding: 14px 70px 15px
       &--wide
          max-width: 390px
-         padding: 14px 68px 15px
+         padding: 14px 30px 15px
       &--secondary, &--wide
          font-size: 16px
    .important
@@ -156,30 +239,30 @@
 
 @media screen and (min-width: $width_desk)
    .main-title
-      font-size: 36px
+      font-size: 38px
    .num-list
-      font-size: 13px
+      font-size: 15px
       li
          margin-bottom: 19px
       ol
          margin-top: 14px
    .text
-      font-size: 15px
+      font-size: 17px
       line-height: 167%
    .title
       margin-bottom: 22px
-      font-size: 20px
+      font-size: 22px
       line-height: 130%
    .important
-      font-size: 15px
+      font-size: 17px
       line-height: 167%
    .btn
       &--secondary, &--wide
-         font-size: 18px
+         font-size: 20px
       &--wide
          line-height: 122%
    .dot-list
-      font-size: 15px
+      font-size: 17px
       li
          margin-bottom: 15px
    .info

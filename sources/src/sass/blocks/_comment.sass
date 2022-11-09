@@ -1,5 +1,4 @@
 .comment
-   margin-bottom: $margin
    &__inner
       padding: 20px
       border: 1px solid #BEBEBE
@@ -33,13 +32,13 @@
    &__author
       margin-right: 10px
       font-weight: 500
-      font-size: 13px
+      font-size: 15px
       line-height: 150%
       color: #393939
    &__person
       padding-left: 28px
       font-weight: 300
-      font-size: 13px
+      font-size: 14px
       line-height: 120%
       color: #393939
       position: relative
@@ -55,7 +54,7 @@
       display: flex
       align-items: center
       font-weight: 300
-      font-size: 12px
+      font-size: 13px
       line-height: 150%
       color: #000
    &__like
@@ -66,7 +65,7 @@
          margin-right: 4px
    &__text
       font-weight: 300
-      font-size: 13px
+      font-size: 15px
       line-height: 138%
       color: #393939
    &__btn
@@ -76,6 +75,12 @@
       font-size: 12px
       line-height: 150%
       color: $accent
+      align-items: center
+      img
+         width: 18px
+         min-width: 18px
+         height: 18px
+         margin-right: 12px
    &__dialog
       .comment
          &__answer
@@ -83,7 +88,7 @@
             &:last-child
                border-bottom: 0
    &__all
-      font-size: 13px
+      font-size: 15px
       line-height: 120%
       color: $accent
       span
@@ -120,13 +125,16 @@
    .comment
       &__title
          margin-bottom: 18px
+      &__author
+         font-size: 17px
       &__answer
          padding: 22px 0
       &__text
-         font-size: 14px
+         font-size: 17px
          line-height: 143%
       &__btn
-         display: inline-block
+         display: inline-flex
+         font-size: 14px
       &__dialog
          padding-left: 50px
       &__block

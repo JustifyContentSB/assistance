@@ -1,4 +1,5 @@
 .article
+   margin-bottom: $margin
    &__aside
       display: none
    &__lead
@@ -9,9 +10,9 @@
       object-fit: cover
    &__title
       position: absolute
-      bottom: 23px
-      left: 23px
-      right: 23px
+      bottom: 20px
+      left: 16px
+      right: 16px
    &__pic
       width: 100%
       height: 172px
@@ -44,15 +45,23 @@
       display: flex
       flex-wrap: wrap
       li
-         padding: 10px 15px
+         
          margin-right: 10px
          margin-bottom: 10px
+         
+      a
+         display: block
+         padding: 10px 15px
          font-weight: 400
-         font-size: 13px
+         font-size: 14px
          line-height: 120%
          color: #5A5A5A
          background: #EBEBEB
          border-radius: 4px
+         transition: all $transitionTime ease
+         &:hover,
+         &:focus
+            background: #E0E0E0
 
 @media screen and (min-width: 460px)
    .article
@@ -106,3 +115,5 @@
             margin-bottom: 70px
       &__themes
          margin-bottom: 42px
+         a
+            font-size: 16px

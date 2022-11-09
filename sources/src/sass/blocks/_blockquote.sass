@@ -29,6 +29,13 @@
       font-size: 13px
       line-height: 138%
       font-style: italic
+      display: -webkit-box
+      -webkit-line-clamp: 3
+      -webkit-box-orient: vertical
+      text-overflow: ellipsis
+      overflow: hidden
+      &--all
+         display: block
    &__read
       margin-bottom: 23px
       display: inline-flex
@@ -46,6 +53,10 @@
             width: 13px
             height: 13px
             background: url('../images/icons/arrow-down.svg') no-repeat center / contain
+      &--toggled
+         span
+            &::after
+               transform: translateY(-50%) rotate(0deg)
    &__cite
       display: flex
       flex-direction: column
@@ -76,10 +87,19 @@
 
 @media screen and (min-width: $width_desk)
    .blockquote
+      &__title
+         font-size: 18px
       &__text
+         font-size: 16px
          line-height: 157%
       &__read
          margin-bottom: 30px
+         font-size: 15px
          span
             &::after
                right: -25px
+      &__author
+         margin-bottom: 6px
+         font-size: 15px
+      &__pro
+         font-size: 14px

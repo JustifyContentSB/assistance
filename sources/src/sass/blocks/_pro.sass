@@ -9,6 +9,7 @@
       border-radius: 4px
    &__ava
       width: 90px
+      min-width: 90px
       margin-bottom: 22px
       img
          width: 100%
@@ -17,20 +18,20 @@
       margin-bottom: 8px
       font-weight: 500
       font-style: italic
-      font-size: 16px
+      font-size: 18px
       line-height: 156%
       color: #233148
    &__about
       margin-bottom: 10px
       font-weight: 300
       font-style: italic
-      font-size: 12px
+      font-size: 14px
       line-height: 133%
       color: #393939
    &__text
       margin-bottom: 23px
       font-weight: 400
-      font-size: 13px
+      font-size: 15px
       line-height: 120%
       color: #5A5A5A
 
@@ -43,6 +44,7 @@
          align-items: flex-start
       &__ava
          width: 111px
+         min-width: 111px
          margin: 0
          margin-right: 30px
       &__text
@@ -51,5 +53,11 @@
 
 @media screen and (min-width: $width_desk)
    .pro
+      &__name
+         font-size: 20px
+      &__about
+         font-size: 16px
+      &__text
+         font-size: 17px
       &__text
          margin-bottom: 32px
