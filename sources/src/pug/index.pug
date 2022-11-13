@@ -26,21 +26,23 @@ block page
                   time(datetime="2020-10-31") 31 октября 2020
                li.data__item
                   img.data__icon(src="images/icons/eye.svg" alt="иконка" width="18" height="18")
-                  | 45, 505
+                  | 45 505
                li.data__item
-                  img.data__icon(src="images/icons/heart.svg" alt="иконка" width="18" height="18")
-                  | 543
+                  a.data__btn(href="#")
+                     img.data__icon(src="images/icons/heart.svg" alt="иконка" width="18" height="18")
+                     | 543
                li.data__item
-                  img.data__icon(src="images/icons/comment.svg" alt="иконка" width="18" height="18")
-                  | 34
+                  a.data__btn.js-anchor(href="#comment")
+                     img.data__icon(src="images/icons/comment.svg" alt="иконка" width="18" height="18")
+                     | 34
 
             section.content#content
                .content__inner
                   .content__top
                      h2.content__title Содержание статьи
-                     button.content__toggle
+                     button.content__toggle.content__toggle--active
                         img(src="images/icons/arrow-down.svg" alt="иконка" width="18" height="18")
-                  ol.num-list
+                  ol.num-list.show(style="display: block")
                      li
                         p.
                            Переуступка долга: 1 способ решения вопроса, если уволили с работы и нечем платить кредит
@@ -67,6 +69,9 @@ block page
             section.info
                .info__inner
                   h2.title Переуступка долга: 1 способ решения вопроса, если уволили с работы и нечем платить кредит. Заголовок в две строки + текст
+                  p.text.
+                     Жизнь совершенно непредсказуема. Собрался поехать в отпуск — сделали карантин. Хотел получить повышение — попал под сокращение. И, увы, этих историй тысячи. Может случиться и более сложная ситуация, например, вас уволили с работы, но нужно платить кредит. И эта ситуация неудивительна, ведь по государственной статистике из-за пандемии без дохода осталось более 2 млн людей. И это данные даже без учёта неоплачиваемых «отпусков». Если ли выход из этой ситуации? Разумеется! В этой статье мы расскажем о самом эффективном способе решения проблемы, если уволили с работы, а кредит нужно платить.
+                  h3.sub-title Переуступка долга: 1 способ решения вопроса, если уволили с работы и нечем платить кредит. Заголовок в две строки + текст
                   p.text.
                      Жизнь совершенно непредсказуема. Собрался поехать в отпуск — сделали карантин. Хотел получить повышение — попал под сокращение. И, увы, этих историй тысячи. Может случиться и более сложная ситуация, например, вас уволили с работы, но нужно платить кредит. И эта ситуация неудивительна, ведь по государственной статистике из-за пандемии без дохода осталось более 2 млн людей. И это данные даже без учёта неоплачиваемых «отпусков». Если ли выход из этой ситуации? Разумеется! В этой статье мы расскажем о самом эффективном способе решения проблемы, если уволили с работы, а кредит нужно платить.
 
@@ -228,15 +233,15 @@ block page
                         li
                            a(href="#") 
                               img.share__icons-icon(src="images/icons/comment.svg" alt="иконка" width="24" height="24")
-                              span.share__icons-num 45, 505
+                              span.share__icons-num 45 505
                         li
                            a(href="#")
                               img.share__icons-icon(src="images/icons/like.svg" alt="иконка" width="24" height="24")
-                              span.share__icons-num 45, 505
+                              span.share__icons-num 45 505
                         li
                            a(href="#") 
                               img.share__icons-icon(src="images/icons/dislike.svg" alt="иконка" width="24" height="24")
-                              span.share__icons-num 45, 505
+                              span.share__icons-num 45 505
 
             section.pro
                .pro__inner
@@ -262,7 +267,7 @@ block page
                li
                   a(href="#") Переуступка прав
 
-            section.comment
+            section.comment#comment
                .comment__inner
                   h2.comment__title.title Комментарии: #[span.comment__title-num 21]
                   .comment__block
@@ -277,41 +282,34 @@ block page
                                     time.comment__time(datetime="2022-03-02") 02.03.2022
                               p.comment__text.
                                  В ломбард обращаться не самая лучшая идея, это то же самое, что менять шило на мыло. Если есть возможность получить деньги у родственников, лучше этот вариант. Конечно выплатить своевременно.
-                              button.comment__btn #[img(src="images/icons/hide.svg" alt="иконка" width="16" height="16")] Скрыть ответы
+                              .comment__manage
+                                 button.comment__btn Комментировать
                         li.comment__item
                            .comment__answer
                               header.comment__header
                                  .comment__names
-                                    p.comment__author Igor Popov
+                                    p.comment__author Надежда
                                  .comment__info
                                     p.comment__like #[img(src="images/icons/heart-gray.svg" alt="иконка" width="18" height="18")] 543
                                     time.comment__time(datetime="2022-03-02") 02.03.2022
                               p.comment__text.
                                  Да это верно,здесь задолженность погасить у коллекторов,но образуется задолженность в ломбард,а там процент ничуть не меньше,чем в займам,поэтому прежде чем брать займ, лучше 100 раз подумать о всех последствиях.
-                              button.comment__btn #[img(src="images/icons/show.svg" alt="иконка" width="18" height="18")] Показать ответы
+                              .comment__manage
+                                 button.comment__btn Комментировать
                         li.comment__item
                            .comment__answer
                               header.comment__header
                                  .comment__names
-                                    p.comment__author Igor Popov
+                                    p.comment__author София
                                  .comment__info
                                     p.comment__like #[img(src="images/icons/heart-gray.svg" alt="иконка" width="16" height="16")] 543
                                     time.comment__time(datetime="2022-03-02") 02.03.2022
                               p.comment__text.
                                  Увы Мы живем в такое время, когда без взятия кредита не обойтись! Вот и наша семья столкнулась с такой проблемой, нужна была достаточно большая сумма на лечение в частной клинике, а среднестатистической семье таких денег взять не от куда. Большую часть мы уже выплатили, но все же долг еще значительный. В статье заинтересовал пункт "Рефинансирование" - если его запрашивать, то мы получаем новый кредит под больший процент? Или же это зависит от условий кредитной организации?
-                              button.comment__btn Комментировать
-                           .comment__dialog
-                              .comment__answer
-                                 header.comment__header
-                                    .comment__names
-                                       p.comment__author Igor Popov
-                                       p.comment__person Надежда
-                                    .comment__info
-                                       p.comment__like #[img(src="images/icons/heart-gray.svg" alt="иконка" width="16" height="16")] 543
-                                       time.comment__time(datetime="2022-03-02") 02.03.2022
-                                 p.comment__text.
-                                    Увы Мы живем в такое время, когда без взятия кредита не обойтись! Вот и наша семья столкнулась с такой проблемой, нужна была достаточно большая сумма на лечение в частной клинике, а среднестатистической семье таких денег взять не от куда. Большую часть мы уже выплатили, но все же долг еще значительный. В статье заинтересовал пункт "Рефинансирование" - если его запрашивать, то мы получаем новый кредит под больший процент? Или же это зависит от условий кредитной организации?
+                              .comment__manage
                                  button.comment__btn Комментировать
+                                 button.comment__btn.comment__show #[span Показать 2 ответа]
+                           .comment__dialog
                               .comment__answer
                                  header.comment__header
                                     .comment__names
@@ -322,6 +320,81 @@ block page
                                        time.comment__time(datetime="2022-03-02") 02.03.2022
                                  p.comment__text.
                                     Увы Мы живем в такое время, когда без взятия кредита не обойтись! Вот и наша семья столкнулась с такой проблемой, нужна была достаточно большая сумма на лечение в частной клинике, а среднестатистической семье таких денег взять не от куда. Большую часть мы уже выплатили, но все же долг еще значительный. В статье заинтересовал пункт "Рефинансирование" - если его запрашивать, то мы получаем новый кредит под больший процент? Или же это зависит от условий кредитной организации?
+                                 .comment__manage
+                                    button.comment__btn Комментировать
+                              .comment__answer
+                                 header.comment__header
+                                    .comment__names
+                                       p.comment__author Надежда
+                                       p.comment__person София
+                                    .comment__info
+                                       p.comment__like #[img(src="images/icons/heart-gray.svg" alt="иконка" width="16" height="16")] 543
+                                       time.comment__time(datetime="2022-03-02") 02.03.2022
+                                 p.comment__text.
+                                    Увы Мы живем в такое время, когда без взятия кредита не обойтись! Вот и наша семья столкнулась с такой проблемой, нужна была достаточно большая сумма на лечение в частной клинике, а среднестатистической семье таких денег взять не от куда. Большую часть мы уже выплатили, но все же долг еще значительный. В статье заинтересовал пункт "Рефинансирование" - если его запрашивать, то мы получаем новый кредит под больший процент? Или же это зависит от условий кредитной организации?
+                                 .comment__manage
+                                    button.comment__btn Комментировать
+                        li.comment__item
+                           .comment__answer
+                              header.comment__header
+                                 .comment__names
+                                    p.comment__author София
+                                 .comment__info
+                                    p.comment__like #[img(src="images/icons/heart-gray.svg" alt="иконка" width="16" height="16")] 543
+                                    time.comment__time(datetime="2022-03-02") 02.03.2022
+                              p.comment__text.
+                                 Увы Мы живем в такое время, когда без взятия кредита не обойтись! Вот и наша семья столкнулась с такой проблемой, нужна была достаточно большая сумма на лечение в частной клинике, а среднестатистической семье таких денег взять не от куда. Большую часть мы уже выплатили, но все же долг еще значительный. В статье заинтересовал пункт "Рефинансирование" - если его запрашивать, то мы получаем новый кредит под больший процент? Или же это зависит от условий кредитной организации?
+                              .comment__manage
+                                 button.comment__btn Комментировать
+                                 button.comment__btn.comment__show #[span Показать 2 ответа]
+                           .comment__dialog
+                              .comment__answer
+                                 header.comment__header
+                                    .comment__names
+                                       p.comment__author Igor Popov
+                                       p.comment__person София
+                                    .comment__info
+                                       p.comment__like #[img(src="images/icons/heart-gray.svg" alt="иконка" width="16" height="16")] 543
+                                       time.comment__time(datetime="2022-03-02") 02.03.2022
+                                 p.comment__text.
+                                    Увы Мы живем в такое время, когда без взятия кредита не обойтись! Вот и наша семья столкнулась с такой проблемой, нужна была достаточно большая сумма на лечение в частной клинике, а среднестатистической семье таких денег взять не от куда. Большую часть мы уже выплатили, но все же долг еще значительный. В статье заинтересовал пункт "Рефинансирование" - если его запрашивать, то мы получаем новый кредит под больший процент? Или же это зависит от условий кредитной организации?
+                                 .comment__manage
+                                    button.comment__btn Комментировать
+                              .comment__answer
+                                 header.comment__header
+                                    .comment__names
+                                       p.comment__author Надежда
+                                       p.comment__person София
+                                    .comment__info
+                                       p.comment__like #[img(src="images/icons/heart-gray.svg" alt="иконка" width="16" height="16")] 543
+                                       time.comment__time(datetime="2022-03-02") 02.03.2022
+                                 p.comment__text.
+                                    Увы Мы живем в такое время, когда без взятия кредита не обойтись! Вот и наша семья столкнулась с такой проблемой, нужна была достаточно большая сумма на лечение в частной клинике, а среднестатистической семье таких денег взять не от куда. Большую часть мы уже выплатили, но все же долг еще значительный. В статье заинтересовал пункт "Рефинансирование" - если его запрашивать, то мы получаем новый кредит под больший процент? Или же это зависит от условий кредитной организации?
+                                 .comment__manage
+                                    button.comment__btn Комментировать
+                        li.comment__item
+                           .comment__answer
+                              header.comment__header
+                                 .comment__names
+                                    p.comment__author Igor Popov
+                                 .comment__info
+                                    p.comment__like #[img(src="images/icons/heart-gray.svg" alt="иконка" width="16" height="16")] 543
+                                    time.comment__time(datetime="2022-03-02") 02.03.2022
+                              p.comment__text.
+                                 В ломбард обращаться не самая лучшая идея, это то же самое, что менять шило на мыло. Если есть возможность получить деньги у родственников, лучше этот вариант. Конечно выплатить своевременно.
+                              .comment__manage
+                                 button.comment__btn Комментировать
+                        li.comment__item
+                           .comment__answer
+                              header.comment__header
+                                 .comment__names
+                                    p.comment__author Надежда
+                                 .comment__info
+                                    p.comment__like #[img(src="images/icons/heart-gray.svg" alt="иконка" width="18" height="18")] 543
+                                    time.comment__time(datetime="2022-03-02") 02.03.2022
+                              p.comment__text.
+                                 Да это верно,здесь задолженность погасить у коллекторов,но образуется задолженность в ломбард,а там процент ничуть не меньше,чем в займам,поэтому прежде чем брать займ, лучше 100 раз подумать о всех последствиях.
+                              .comment__manage
                                  button.comment__btn Комментировать
 
                      a.comment__all(href="#") #[span Показать еще комментарии]
@@ -381,7 +454,7 @@ block page
                                  li.data__item
                                     img.data__icon(src="images/icons/comment.svg" alt="иконка" width="16" height="16")
                                     | 12
-                           h3.slider__text.
+                           p.slider__text.
                               На ипотеку приходится половина кредитной задолженности россиян
                   .slider__item.swiper-slide
                      a.slider__btn(href="#") 
@@ -398,7 +471,7 @@ block page
                                  li.data__item
                                     img.data__icon(src="images/icons/comment.svg" alt="иконка" width="16" height="16")
                                     | 12
-                           h3.slider__text.
+                           p.slider__text.
                               Застройщики могут переносить сроки сдачи еще на полгода: что ждет дольщиков?
                   .slider__item.swiper-slide
                      a.slider__btn(href="#") 
@@ -415,7 +488,7 @@ block page
                                  li.data__item
                                     img.data__icon(src="images/icons/comment.svg" alt="иконка" width="16" height="16")
                                     | 12
-                           h3.slider__text.
+                           p.slider__text.
                               На ипотеку приходится половина кредитной задолженности россиян
                   .slider__item.swiper-slide
                      a.slider__btn(href="#") 
@@ -432,7 +505,7 @@ block page
                                  li.data__item
                                     img.data__icon(src="images/icons/comment.svg" alt="иконка" width="16" height="16")
                                     | 12
-                           h3.slider__text.
+                           p.slider__text.
                               Дарение/продажа квартиры гражданина Украины в Москве
                   .slider__item.swiper-slide
                      a.slider__btn(href="#") 
@@ -449,7 +522,7 @@ block page
                                  li.data__item
                                     img.data__icon(src="images/icons/comment.svg" alt="иконка" width="16" height="16")
                                     | 12
-                           h3.slider__text.
+                           p.slider__text.
                               Дарение/продажа квартиры гражданина Украины в Москве
                   .slider__item.swiper-slide
                      a.slider__btn(href="#") 
@@ -466,7 +539,7 @@ block page
                                  li.data__item
                                     img.data__icon(src="images/icons/comment.svg" alt="иконка" width="16" height="16")
                                     | 12
-                           h3.slider__text.
+                           p.slider__text.
                               Дарение/продажа квартиры гражданина Украины в Москве
                   .slider__item.swiper-slide
                      a.slider__btn(href="#") 
@@ -483,7 +556,7 @@ block page
                                  li.data__item
                                     img.data__icon(src="images/icons/comment.svg" alt="иконка" width="16" height="16")
                                     | 12
-                           h3.slider__text.
+                           p.slider__text.
                               Дарение/продажа квартиры гражданина Украины в Москве
                   .slider__item.swiper-slide
                      a.slider__btn(href="#") 
@@ -500,7 +573,7 @@ block page
                                  li.data__item
                                     img.data__icon(src="images/icons/comment.svg" alt="иконка" width="16" height="16")
                                     | 12
-                           h3.slider__text.
+                           p.slider__text.
                               Дарение/продажа квартиры гражданина Украины в Москве
                   .slider__item.swiper-slide
                      a.slider__btn(href="#") 
@@ -517,7 +590,7 @@ block page
                                  li.data__item
                                     img.data__icon(src="images/icons/comment.svg" alt="иконка" width="16" height="16")
                                     | 12
-                           h3.slider__text.
+                           p.slider__text.
                               Дарение/продажа квартиры гражданина Украины в Москве
             button.swiper-button-prev.slider__prev-1
             button.swiper-button-next.slider__next-1
@@ -543,7 +616,7 @@ block page
                                  li.data__item
                                     img.data__icon(src="images/icons/comment.svg" alt="иконка" width="16" height="16")
                                     | 12
-                           h3.slider__text.
+                           p.slider__text.
                               На ипотеку приходится половина кредитной задолженности россиян
                   .slider__item.swiper-slide
                      a.slider__btn(href="#") 
@@ -560,7 +633,7 @@ block page
                                  li.data__item
                                     img.data__icon(src="images/icons/comment.svg" alt="иконка" width="16" height="16")
                                     | 12
-                           h3.slider__text.
+                           p.slider__text.
                               Застройщики могут переносить сроки сдачи еще на полгода: что ждет дольщиков?
                   .slider__item.swiper-slide
                      a.slider__btn(href="#") 
@@ -577,7 +650,7 @@ block page
                                  li.data__item
                                     img.data__icon(src="images/icons/comment.svg" alt="иконка" width="16" height="16")
                                     | 12
-                           h3.slider__text.
+                           p.slider__text.
                               На ипотеку приходится половина кредитной задолженности россиян
                   .slider__item.swiper-slide
                      a.slider__btn(href="#") 
@@ -594,7 +667,7 @@ block page
                                  li.data__item
                                     img.data__icon(src="images/icons/comment.svg" alt="иконка" width="16" height="16")
                                     | 12
-                           h3.slider__text.
+                           p.slider__text.
                               Дарение/продажа квартиры гражданина Украины в Москве
                   .slider__item.swiper-slide
                      a.slider__btn(href="#") 
@@ -611,7 +684,7 @@ block page
                                  li.data__item
                                     img.data__icon(src="images/icons/comment.svg" alt="иконка" width="16" height="16")
                                     | 12
-                           h3.slider__text.
+                           p.slider__text.
                               Дарение/продажа квартиры гражданина Украины в Москве
                   .slider__item.swiper-slide
                      a.slider__btn(href="#") 
@@ -628,7 +701,7 @@ block page
                                  li.data__item
                                     img.data__icon(src="images/icons/comment.svg" alt="иконка" width="16" height="16")
                                     | 12
-                           h3.slider__text.
+                           p.slider__text.
                               Дарение/продажа квартиры гражданина Украины в Москве
                   .slider__item.swiper-slide
                      a.slider__btn(href="#") 
@@ -645,7 +718,7 @@ block page
                                  li.data__item
                                     img.data__icon(src="images/icons/comment.svg" alt="иконка" width="16" height="16")
                                     | 12
-                           h3.slider__text.
+                           p.slider__text.
                               Дарение/продажа квартиры гражданина Украины в Москве
                   .slider__item.swiper-slide
                      a.slider__btn(href="#") 
@@ -662,7 +735,7 @@ block page
                                  li.data__item
                                     img.data__icon(src="images/icons/comment.svg" alt="иконка" width="16" height="16")
                                     | 12
-                           h3.slider__text.
+                           p.slider__text.
                               Дарение/продажа квартиры гражданина Украины в Москве
             button.swiper-button-prev.slider__prev-2
             button.swiper-button-next.slider__next-2

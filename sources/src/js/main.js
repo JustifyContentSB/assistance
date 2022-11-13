@@ -10,6 +10,8 @@ $(document).ready(function () {
    contentShow()
    contentSlide()
    blockquoteText()
+   commentShow()
+   commentAllShow()
 });
 
 // Your functions here
@@ -126,6 +128,34 @@ function contentShow() {
          $this.next().toggleClass('show')
          $this.next().slideToggle(350)
       }
+   });
+}
+
+function commentShow() {
+   $('.comment__show').click(function (e) {
+      e.preventDefault();
+
+      let $this = $(this);
+
+      if ($this.parent().parent().next().hasClass('show')) {
+         $this.removeClass('comment__show--active')
+         $this.parent().parent().next().removeClass('show')
+         $this.parent().parent().next().slideUp(350)
+      } else {
+         $this.addClass('comment__show--active')
+         $this.parent().parent().next().removeClass('show')
+         $this.parent().parent().next().slideUp(350)
+         $this.parent().parent().next().toggleClass('show')
+         $this.parent().parent().next().slideToggle(350)
+      }
+   });
+}
+
+function commentAllShow() {
+   $('.comment__all').click(function (e) {
+      e.preventDefault();
+      $(this).css('display', 'none')
+      $('.comment__item').toggleClass('comment__item--active')
    });
 }
 

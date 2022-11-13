@@ -1,6 +1,6 @@
 .breadcrumbs
    &__list
-      padding: 20px 0 20px $padding
+      padding: 20px 0 20px var(--padding)
       font-weight: 400
       font-size: 12px
       line-height: 120%
@@ -16,8 +16,8 @@
       &::-webkit-input-placeholder, &::-moz-placeholder
          color: #fff
    li
-      margin-right: 15px
-      padding-right: 22px
+      margin-right: 10px
+      padding-right: 13px
       position: relative
       &::after
          content: '/'
@@ -39,6 +39,6 @@
 @media screen and (min-width: $width_desk)
    .breadcrumbs
       &__list
-         padding: 24px $padding
+         padding: 24px var(--padding)
          overflow-x: visible
          flex-wrap: wrap

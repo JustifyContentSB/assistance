@@ -2,10 +2,10 @@
    width: 100%
    max-width: 1230px
    margin: 0 auto
-   margin-bottom: $margin
+   margin-bottom: var(--margin)
    .title
       margin-bottom: 20px
-      padding-left: $padding
+      padding-left: var(--padding)
    &__content
       position: relative
    &__item
@@ -33,7 +33,7 @@
       color: #5A5A5A
       transition: all $transitionTime ease
    &__swiper
-      padding: 0 $padding
+      padding: 0 var(--padding)
       overflow: hidden
    .swiper
       &-button
